@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!-- evolution x a16 (bka) trees for xiaomi garnet, mirrors device/xiaomi/garnet evolution.dependencies -->
+  <!-- remotes evo-devices, github-non-los and gitlab come from the evox manifest (snippets/evolution.xml) -->
+
+  <!-- device -->
+  <project path="device/xiaomi/garnet" name="device_xiaomi_garnet" remote="evo-devices" revision="bka" />
+  <project path="device/xiaomi/garnet-miuicamera" name="device_xiaomi_garnet-miuicamera" remote="evo-devices" revision="bka" />
+
+  <!-- vendor -->
+  <project path="vendor/xiaomi/garnet" name="vendor_xiaomi_garnet" remote="evo-devices" revision="bka" />
+  <project path="vendor/xiaomi/garnet-miuicamera" name="c0pt4n/proprietary_vendor_xiaomi_garnet-miuicamera" remote="gitlab" revision="lineage-23.0" />
+
+  <!-- kernel -->
+  <project path="kernel/xiaomi/sm7435" name="kernel_xiaomi_garnet" remote="evo-devices" revision="bka" />
+  <project path="kernel/xiaomi/sm7435-modules" name="kernel_xiaomi_garnet-modules" remote="evo-devices" revision="bka" />
+  <project path="kernel/xiaomi/sm7435-devicetrees" name="kernel_xiaomi_garnet-devicetrees" remote="evo-devices" revision="bka" />
+
+  <!-- hardware -->
+  <project path="hardware/xiaomi" name="Evolution-X-Devices/hardware_xiaomi" remote="github-non-los" revision="bka-no-dolby" />
+  <project path="hardware/dolby" name="Evolution-X-Devices/hardware_dolby" remote="github-non-los" revision="bka-aospa" />
+
+  <!-- apps -->
+  <project path="packages/apps/GameBar" name="packages_apps_GameBar" remote="evo-devices" revision="bka" />
+</manifest>
