@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <!-- evolution x a16 (bka) trees for xiaomi garnet, mirrors device/xiaomi/garnet evolution.dependencies -->
-  <!-- remotes evo-devices, github-non-los and gitlab come from the evox manifest (snippets/evolution.xml) -->
+  <!-- lineageos 23.2 (android 16) trees for xiaomi garnet, mirrors device/xiaomi/garnet lineage.dependencies -->
+  <!-- own remote so paths don't depend on how crave mirrors the lineage manifest -->
+  <remote name="garnet-gh" fetch="https://github.com" revision="refs/heads/lineage-23.2" />
 
   <!-- device -->
-  <project path="device/xiaomi/garnet" name="device_xiaomi_garnet" remote="evo-devices" revision="bka" />
-  <project path="device/xiaomi/garnet-miuicamera" name="device_xiaomi_garnet-miuicamera" remote="evo-devices" revision="bka" />
+  <project path="device/xiaomi/garnet" name="LineageOS/android_device_xiaomi_garnet" remote="garnet-gh" />
 
-  <!-- vendor -->
-  <project path="vendor/xiaomi/garnet" name="vendor_xiaomi_garnet" remote="evo-devices" revision="bka" />
-  <project path="vendor/xiaomi/garnet-miuicamera" name="c0pt4n/proprietary_vendor_xiaomi_garnet-miuicamera" remote="gitlab" revision="lineage-23.0" />
+  <!-- vendor blobs -->
+  <project path="vendor/xiaomi/garnet" name="TheMuppets/proprietary_vendor_xiaomi_garnet" remote="garnet-gh" clone-depth="1" />
 
   <!-- kernel -->
-  <project path="kernel/xiaomi/sm7435" name="kernel_xiaomi_garnet" remote="evo-devices" revision="bka" />
-  <project path="kernel/xiaomi/sm7435-modules" name="kernel_xiaomi_garnet-modules" remote="evo-devices" revision="bka" />
-  <project path="kernel/xiaomi/sm7435-devicetrees" name="kernel_xiaomi_garnet-devicetrees" remote="evo-devices" revision="bka" />
+  <project path="kernel/xiaomi/sm7435" name="LineageOS/android_kernel_xiaomi_sm7435" remote="garnet-gh" />
+  <project path="kernel/xiaomi/sm7435-modules" name="LineageOS/android_kernel_xiaomi_sm7435-modules" remote="garnet-gh" />
+  <project path="kernel/xiaomi/sm7435-devicetrees" name="LineageOS/android_kernel_xiaomi_sm7435-devicetrees" remote="garnet-gh" />
 
   <!-- hardware -->
-  <project path="hardware/xiaomi" name="Evolution-X-Devices/hardware_xiaomi" remote="github-non-los" revision="bka-no-dolby" />
-  <project path="hardware/dolby" name="Evolution-X-Devices/hardware_dolby" remote="github-non-los" revision="bka-aospa" />
-
-  <!-- apps -->
-  <project path="packages/apps/GameBar" name="packages_apps_GameBar" remote="evo-devices" revision="bka" />
+  <project path="hardware/xiaomi" name="LineageOS/android_hardware_xiaomi" remote="garnet-gh" />
 </manifest>
